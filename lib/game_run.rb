@@ -53,7 +53,7 @@ class Run_controller
         Game.new(player_1 = Players::Computer.new("X"), player_2 = Players::Computer.new("O"), board = Board.new).play
         #binding.pry 
       when "1" 
-        puts "Who should go first? Please enter 'h' for human or 'c' for computer"
+        puts "Player vs. Computer Mode. Who should go first? Please enter 'h' for human or 'c' for computer"
         first_player = gets.strip.downcase
           if first_player == "h".downcase
             Game.new(player_1 = Players::Human.new("X"), player_2 = Players::Computer.new("O"), board = Board.new).play
