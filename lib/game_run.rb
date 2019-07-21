@@ -55,7 +55,7 @@ class Run_controller
       when "1" 
         puts "Who should go first? Please enter 'h' for human or 'c' for computer"
         first_player = gets.strip
-          if first_player == "h"
+          if "H".casecmp(first_player) == "0"
             Game.new(player_1 = Players::Human.new("X"), player_2 = Players::Computer.new("O"), board = Board.new).play
           else first_player == "c"
             Game.new(player_1 = Players::Computer.new("X"), player_2 = Players::Human.new("O"), board = Board.new).play
