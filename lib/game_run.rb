@@ -60,10 +60,10 @@ class Run_controller
           else first_player == "c"
             Game.new(player_1 = Players::Computer.new("X"), player_2 = Players::Human.new("O"), board = Board.new).play
           end #need to consider downcase/ case sensitive
-          #needs to either exit or repeat puts line 
+          #needs to either exit or repeat puts line if invalid response 
           
-            
       when "2" 
+        puts "Player 1 will be 'X' and Player 2 will be 'O'."
         Game.new.play 
       else 
         puts "You entered an error. Please put in a valid response." 
