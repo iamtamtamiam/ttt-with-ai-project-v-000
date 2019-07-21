@@ -58,15 +58,18 @@ class Run_controller
         first_player = gets.strip.downcase
           if first_player == "h".downcase
             Game.new(player_1 = Players::Human.new("X"), player_2 = Players::Computer.new("O"), board = Board.new).play
+            ending 
           elsif first_player == "c".downcase
             Game.new(player_1 = Players::Computer.new("X"), player_2 = Players::Human.new("O"), board = Board.new).play
+            ending 
           else 
             puts "You entered an error.Returning to main menu."
             greeting
           end  
       when "2" 
         puts "Player 1 will be 'X' and Player 2 will be 'O'."
-        Game.new.play 
+        Game.new.play
+        ending 
       else 
         puts "You entered an error. Please put in a valid response." 
         greeting 
