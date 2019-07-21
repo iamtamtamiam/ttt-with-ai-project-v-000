@@ -51,6 +51,7 @@ class Run_controller
     case var 
       when "0" 
         Game.new(player_1 = Players::Computer.new("X"), player_2 = Players::Computer.new("O"), board = Board.new).play
+        ending 
         #binding.pry 
       when "1" 
         puts "Player vs. Computer Mode. Who should go first? Please enter 'h' for human or 'c' for computer"
@@ -78,7 +79,7 @@ class Run_controller
     puts "Sure! - please enter 'Y'"
     puts "No, thanks! - please enter 'N'"
     answer = gets.strip.downcase
-      if answer == "yes"
+      if answer == "y"
         greeting
       else
         puts "You have exited the game."
