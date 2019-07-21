@@ -60,7 +60,7 @@ class Run_controller
           elsif first_player == "c".downcase
             Game.new(player_1 = Players::Computer.new("X"), player_2 = Players::Human.new("O"), board = Board.new).play
           else 
-            puts "You entered an error."
+            puts "You entered an error.Returning to main menu."
             greeting
           end #need to consider downcase/ case sensitive
           #needs to either exit or repeat puts line if invalid response 
