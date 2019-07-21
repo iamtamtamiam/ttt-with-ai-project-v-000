@@ -54,10 +54,10 @@ class Run_controller
         #binding.pry 
       when "1" 
         puts "Who should go first? Please enter 'h' for human or 'c' for computer"
-        first_player = gets.strip
-          if "H".casecmp(first_player) == "0"
+        first_player = gets.strip.downcase
+          if first_player == "h".downcase
             Game.new(player_1 = Players::Human.new("X"), player_2 = Players::Computer.new("O"), board = Board.new).play
-          else first_player == "c"
+          else first_player == "c".downcase
             Game.new(player_1 = Players::Computer.new("X"), player_2 = Players::Human.new("O"), board = Board.new).play
           end #need to consider downcase/ case sensitive
           #needs to either exit or repeat puts line if invalid response 
