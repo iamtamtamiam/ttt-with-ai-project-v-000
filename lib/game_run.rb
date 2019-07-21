@@ -73,4 +73,19 @@ class Run_controller
   end
   
   
+  def ending
+    puts "Would you like to play again?"
+    puts "Sure! - please enter 'Y'"
+    puts "No, thanks! - please enter 'N'"
+    answer = gets.strip.downcase
+      if answer == "yes"
+        greeting
+      else
+        puts "You have exited the game."
+      end 
+  end 
+      
+       
+  end 
+  
 end 
