@@ -42,7 +42,8 @@ class Run_controller
     puts "Welcome! Please select what game version you would like to play." 
     puts "If you would like to play computer vs. computer, please enter 0" 
     puts "If you would like to play human vs. computer, please enter 1" 
-    puts "If you would like to play human vs. human, please enter 2" 
+    puts "If you would like to play human vs. human, please enter 2"
+    puts "If you would like to exit the program, please enter 4"
     @game_choice = gets.strip #user input for 0,1,2 
     game_type(@game_choice)
   end 
@@ -69,7 +70,9 @@ class Run_controller
       when "2" 
         puts "Player 1 will be 'X' and Player 2 will be 'O'."
         Game.new.play
-        ending 
+        ending
+      when "4"
+        puts "You have exited the game."
       else 
         puts "You entered an error. Please put in a valid response." 
         greeting 
