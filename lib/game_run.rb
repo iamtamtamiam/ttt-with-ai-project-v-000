@@ -62,9 +62,7 @@ class Run_controller
           else 
             puts "You entered an error.Returning to main menu."
             greeting
-          end #need to consider downcase/ case sensitive
-          #needs to either exit or repeat puts line if invalid response 
-          
+          end  
       when "2" 
         puts "Player 1 will be 'X' and Player 2 will be 'O'."
         Game.new.play 
